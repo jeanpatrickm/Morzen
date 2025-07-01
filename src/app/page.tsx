@@ -311,7 +311,7 @@ export default function MorzenLanding() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-purple-500/10 to-violet-500/10 dark:from-purple-500/20 dark:to-violet-500/20 rounded-3xl backdrop-blur-sm border border-gray-200 dark:border-white/10 flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/images/sdjfhsjf.png?height=400&width=400"
                   alt="Equipe Morzen desenvolvendo software"
                   width={400}
                   height={400}
