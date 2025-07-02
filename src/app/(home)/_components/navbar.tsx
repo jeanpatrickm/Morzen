@@ -2,10 +2,9 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { Code2, Menu, MenuIcon, Moon, Sun, X } from "lucide-react";
+import { Code2, MenuIcon, Moon, Sun } from "lucide-react";
 
 import { useTheme } from "next-themes";
-import { useState } from "react";
 
 import {
   Sheet,
@@ -90,7 +89,7 @@ function MobileNavbar() {
             <MenuIcon />
           </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent aria-description="Mobile navigation">
           <SheetHeader>
             <SheetTitle>
               Navegação
@@ -103,7 +102,7 @@ function MobileNavbar() {
                 href={l.href}
                 className="w-full"
               >
-                <Button variant={"ghost"} className="w-full">
+                <Button variant={"outline"} className="w-full">
                   {l.title}
                 </Button>
               </Link>
