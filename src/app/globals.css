@@ -112,10 +112,15 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
