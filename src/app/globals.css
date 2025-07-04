@@ -123,5 +123,8 @@ button:hover {
 
   body {
     @apply bg-background text-foreground;
+    scrollbar-color: var(--foreground) var(--background);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
   }
 }
