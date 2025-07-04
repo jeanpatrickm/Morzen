@@ -7,13 +7,13 @@ import { Footer } from "./_components/footer";
 
 export default function MorzenLanding() {
   return (
-    <>
+    <main>
       <Hero />
       <Services />
       <About />
       <Stats />
       <Contact />
       <Footer />
-    </>
+    </main>
   );
 }

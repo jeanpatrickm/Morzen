@@ -63,9 +63,11 @@ function DesktopNavbar() {
           </Button>
         </Link>
       ))}
-      <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600">
-        Começar Projeto
-      </Button>
+      <Link href="/new_project">
+        <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600">
+          Começar Projeto
+        </Button>
+      </Link>
       <Button
         variant="ghost"
         size="icon"
@@ -107,9 +109,11 @@ function MobileNavbar() {
                 </Button>
               </Link>
             ))}
-            <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 w-full">
-              Começar Projeto
-            </Button>
+            <Link href="/new_project">
+              <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 w-full">
+                Começar Projeto
+              </Button>
+            </Link>
           </nav>
         </SheetContent>
       </Sheet>
