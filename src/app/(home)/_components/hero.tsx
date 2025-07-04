@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative z-10 pt-20 pb-32 px-4">
+    <section className="relative z-10 pt-20 pb-32 px-4 h-screen flex justify-center items-center">
       <div className="container mx-auto text-center">
         <Badge className="mb-6 bg-purple-500/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-300 border-purple-500/20 dark:border-purple-500/30">
           Desenvolvimento de Software
