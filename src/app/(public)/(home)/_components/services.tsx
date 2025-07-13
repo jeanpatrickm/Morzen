@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Code2, Database, Globe, Smartphone } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function Services() {
   return (
@@ -81,6 +81,5 @@ export function Services() {
         </div>
       </div>
     </section>
-
-  )
+  );
 }

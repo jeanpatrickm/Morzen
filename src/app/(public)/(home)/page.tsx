@@ -1,9 +1,8 @@
-import { Hero } from "./_components/hero";
-import { Services } from "./_components/services";
 import { About } from "./_components/about";
-import { Stats } from "./_components/stats";
 import { Contact } from "./_components/contact";
 import { Footer } from "./_components/footer";
+import { Hero } from "./_components/hero";
+import { Services } from "./_components/services";
 
 export default function MorzenLanding() {
   return (
@@ -11,7 +10,8 @@ export default function MorzenLanding() {
       <Hero />
       <Services />
       <About />
-      <Stats />
+      {/* UMA HORA  */}
+      {/* <Stats /> */}
       <Contact />
       <Footer />
     </main>
