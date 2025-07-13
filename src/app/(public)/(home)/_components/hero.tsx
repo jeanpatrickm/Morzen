@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -23,13 +24,15 @@ export function Hero() {
           soluções tecnológicas inovadoras e escaláveis.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg">
-            Iniciar Projeto
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button size="lg" variant="outline">
-            Ver Portfolio
-          </Button>
+          <Link href="/new_project">
+            <Button size="lg">
+              Iniciar Projeto
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+          {/* <Button size="lg" variant="outline"> */}
+          {/*   Ver Portfolio */}
+          {/* </Button> */}
         </div>
       </div>
     </section>

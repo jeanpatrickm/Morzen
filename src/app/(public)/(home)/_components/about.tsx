@@ -16,8 +16,8 @@ export function About() {
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 leading-relaxed">
               Somos uma startup focada em desenvolvimento de software de alta
-              qualidade. Nossa missão é transformar ideias em soluções
-              digitais que geram valor real para nossos clientes.
+              qualidade. Nossa missão é transformar ideias em soluções digitais
+              que geram valor real para nossos clientes.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -46,19 +46,28 @@ export function About() {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-purple-500/10 to-violet-500/10 dark:from-purple-500/20 dark:to-violet-500/20 rounded-3xl backdrop-blur-sm border border-gray-200 dark:border-white/10 flex items-center justify-center">
+          <div className="relative flex gap-2">
+            <div className="bg-card p-4 rounded-lg shadow-sm border">
               <Image
-                src="/images/sdjfhsjf.png?height=400&width=400"
+                src="/diego_about_pic.jpg"
                 alt="Equipe Morzen desenvolvendo software"
-                width={400}
-                height={400}
-                className="rounded-2xl"
+                width={300}
+                height={300}
+                className="rounded-2xl object-cover"
+              />
+            </div>
+            <div className="bg-card p-4 rounded-lg shadow-sm border">
+              <Image
+                src="/jean_about_pic.jpg"
+                alt="Equipe Morzen desenvolvendo software"
+                width={300}
+                height={300}
+                className="rounded-2xl object-cover h-full"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

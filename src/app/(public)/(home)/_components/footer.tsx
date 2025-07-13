@@ -1,5 +1,4 @@
 import { Code2 } from "lucide-react";
-import Link from "next/link";
 
 export function Footer() {
   return (
@@ -22,91 +21,10 @@ export function Footer() {
 
           <div>
             <h3 className="text-gray-900 dark:text-white font-semibold mb-4">
-              Serviços
-            </h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Desenvolvimento Web
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Apps Mobile
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Sistemas Corporativos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Consultoria Tech
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">
-              Empresa
-            </h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Sobre
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  Carreiras
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">
               Contato
             </h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>contato@morzen.com</li>
-              <li>+55 (11) 99999-9999</li>
+              <li>contato.mozen@gmail.com</li>
               <li>São Paulo, SP</li>
             </ul>
           </div>
@@ -120,5 +38,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
