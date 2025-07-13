@@ -23,22 +23,15 @@ export function Hero() {
           soluções tecnológicas inovadoras e escaláveis.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-lg px-8 py-3"
-          >
+          <Button size="lg">
             Iniciar Projeto
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 text-lg px-8 py-3 bg-transparent"
-          >
+          <Button size="lg" variant="outline">
             Ver Portfolio
           </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }

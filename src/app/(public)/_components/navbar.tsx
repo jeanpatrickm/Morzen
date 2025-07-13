@@ -1,10 +1,8 @@
-"use client"
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
+"use client";
 import { Code2, MenuIcon, Moon, Sun } from "lucide-react";
-
+import Link from "next/link";
 import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
 
 import {
   Sheet,
@@ -12,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
 
 const LINKS = [
   {
@@ -21,13 +19,13 @@ const LINKS = [
   },
   {
     title: "Sobre",
-    href: "/#about"
+    href: "/#about",
   },
   {
     title: "Contato",
-    href: "/#contact"
-  }
-]
+    href: "/#contact",
+  },
+];
 
 export function Navbar() {
   return (
@@ -45,22 +43,16 @@ export function Navbar() {
         <MobileNavbar />
       </div>
     </div>
-  )
+  );
 }
 
 function DesktopNavbar() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
   return (
     <nav className="hidden md:flex items-center space-x-8">
       {LINKS.map((l, i) => (
-        <Link
-          key={i}
-          href={l.href}
-          className="w-full"
-        >
-          <Button variant={"ghost"}>
-            {l.title}
-          </Button>
+        <Link key={i} href={l.href} className="w-full">
+          <Button variant={"ghost"}>{l.title}</Button>
         </Link>
       ))}
       <Link href="/new_project">
@@ -79,7 +71,7 @@ function DesktopNavbar() {
         <span className="sr-only">Toggle theme</span>
       </Button>
     </nav>
-  )
+  );
 }
 
 function MobileNavbar() {
@@ -93,30 +85,22 @@ function MobileNavbar() {
         </SheetTrigger>
         <SheetContent aria-description="Mobile navigation">
           <SheetHeader>
-            <SheetTitle>
-              Navegação
-            </SheetTitle>
+            <SheetTitle>Navegação</SheetTitle>
           </SheetHeader>
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {LINKS.map((l, i) => (
-              <Link
-                key={i}
-                href={l.href}
-                className="w-full"
-              >
+              <Link key={i} href={l.href} className="w-full">
                 <Button variant={"outline"} className="w-full">
                   {l.title}
                 </Button>
               </Link>
             ))}
             <Link href="/new_project">
-              <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 w-full">
-                Começar Projeto
-              </Button>
+              <Button>Começar Projeto</Button>
             </Link>
           </nav>
         </SheetContent>
       </Sheet>
     </div>
-  )
+  );
 }

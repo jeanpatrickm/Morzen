@@ -1,8 +1,8 @@
-import { ReactNode } from "react"
-import { Navbar } from "./_components/navbar"
+import { ReactNode } from "react";
+import { Navbar } from "./_components/navbar";
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export default function Layout({ children }: Props) {
@@ -16,5 +16,5 @@ export default function Layout({ children }: Props) {
       </div>
       {children}
     </div>
-  )
+  );
 }
