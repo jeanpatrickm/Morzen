@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Navbar } from "./_components/navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 interface Props {
   children: ReactNode;
@@ -15,6 +16,7 @@ export default function Layout({ children }: Props) {
         <div className="absolute top-1/2 left-3/4 w-48 h-48 bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-3xl"></div>
       </div>
       {children}
+      <Toaster />
     </div>
   );
 }
