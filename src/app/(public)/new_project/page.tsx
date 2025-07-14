@@ -3,12 +3,12 @@
 import { useState } from "react";
 import { FormDescriptionStep } from "./_components/form-description-step";
 import { FormProjectStep } from "./_components/form-project-step";
-import { Project } from "./projects";
+import { Project, projects } from "./projects";
 
 export default function NewProjectPage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedProject, setSelectedProject] = useState<Project | undefined>(
-    undefined,
+    projects[0],
   );
   const totalSteps = 2;
 
