@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FormDescriptionStep } from "./_components/form-description-step";
 import { FormProjectStep } from "./_components/form-project-step";
-import { Project, projects } from "./projects";
+import { type Project, projects } from "./projects";
 
 export default function NewProjectPage() {
   const [currentStep, setCurrentStep] = useState(1);

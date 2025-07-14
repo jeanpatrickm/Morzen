@@ -1,9 +1,9 @@
+import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import type { Project } from "../projects";
-import { useState } from "react";
 
 interface FormDescriptionProps {
   selectedProject?: Project;
@@ -24,7 +24,8 @@ export function FormDescriptionStep({
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleFormSubmit = () => {
+  const handleFormSubmit = (e: FormEvent) => {
+    e.preventDefault();
     handleSubmit({ email, name, description });
     setName("");
     setEmail("");
@@ -45,7 +46,7 @@ export function FormDescriptionStep({
         </p>
       )}
 
-      <div className="w-full space-y-4">
+      <form className="w-full space-y-4" onSubmit={handleFormSubmit}>
         <div className="flex flex-col gap-2">
           <Label htmlFor="nome">Nome</Label>
           <Input
@@ -66,7 +67,7 @@ export function FormDescriptionStep({
             placeholder="Seu email..."
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            maxLength={1024}
+            maxLength={512}
             required
           />
         </div>
@@ -79,8 +80,8 @@ export function FormDescriptionStep({
             placeholder="Descreva a sua ideia..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            minLength={1}
-            maxLength={2048}
+            minLength={4}
+            maxLength={1024}
             required
           />
 
@@ -89,17 +90,17 @@ export function FormDescriptionStep({
             você tem em mente.
           </p>
         </div>
-      </div>
-      <div className="flex justify-between w-full">
-        <div>
-          <Button variant="outline" onClick={handleBack}>
-            Voltar
-          </Button>
+        <div className="flex justify-between w-full">
+          <div>
+            <Button variant="outline" onClick={handleBack} type="button">
+              Voltar
+            </Button>
+          </div>
+          <div>
+            <Button type="submit">Enviar</Button>
+          </div>
         </div>
-        <div>
-          <Button onClick={handleFormSubmit}>Enviar</Button>
-        </div>
-      </div>
+      </form>
     </div>
   );
 }
