@@ -2,8 +2,8 @@
 import { Code2, MenuIcon, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-
 import {
   Sheet,
   SheetContent,
@@ -11,7 +11,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useState } from "react";
 
 const LINKS = [
   {
@@ -76,9 +75,9 @@ function DesktopNavbar() {
 }
 
 function MobileNavbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="md:hidden" >
+    <div className="md:hidden">
       <Sheet open={isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
         <SheetTrigger asChild>
           <Button variant="outline">
@@ -91,13 +90,22 @@ function MobileNavbar() {
           </SheetHeader>
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4 items-center">
             {LINKS.map((l, i) => (
-              <Link key={i} href={l.href} className="w-full" onClick={() => setIsOpen(false)}>
+              <Link
+                key={i}
+                href={l.href}
+                className="w-full"
+                onClick={() => setIsOpen(false)}
+              >
                 <Button variant={"outline"} className="w-full">
                   {l.title}
                 </Button>
               </Link>
             ))}
-            <Link href="/new_project" className="w-full mt-5" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/new_project"
+              className="w-full"
+              onClick={() => setIsOpen(false)}
+            >
               <Button className="w-full">Começar Projeto</Button>
             </Link>
           </nav>
