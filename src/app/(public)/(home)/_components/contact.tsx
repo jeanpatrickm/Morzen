@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +18,7 @@ export function Contact() {
             <Link href={"/new_project"}>
               <Button size="lg">
                 Solicitar Orçamento
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>

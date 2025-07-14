@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
@@ -14,9 +14,7 @@ export function Hero() {
           Transformamos suas{" "}
           <span className="bg-gradient-to-r from-purple-500 to-violet-500 bg-clip-text text-transparent">
             ideias
-          </span>
-
-          {" "}
+          </span>{" "}
           em soluções digitais
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -28,7 +26,7 @@ export function Hero() {
           <Link href="/new_project">
             <Button size="lg">
               Iniciar Projeto
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
           {/* <Button size="lg" variant="outline"> */}
