@@ -23,7 +23,7 @@ const LINKS = [
   },
   {
     title: "Contato",
-    href: "/#contact",
+    href: "/#footer",
   },
 ];
 
@@ -87,7 +87,7 @@ function MobileNavbar() {
           <SheetHeader>
             <SheetTitle>Navegação</SheetTitle>
           </SheetHeader>
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4 items-center">
             {LINKS.map((l, i) => (
               <Link key={i} href={l.href} className="w-full">
                 <Button variant={"outline"} className="w-full">
@@ -95,8 +95,8 @@ function MobileNavbar() {
                 </Button>
               </Link>
             ))}
-            <Link href="/new_project">
-              <Button>Começar Projeto</Button>
+            <Link href="/new_project" className="w-min mt-5">
+              <Button className="w-full">Começar Projeto</Button>
             </Link>
           </nav>
         </SheetContent>
