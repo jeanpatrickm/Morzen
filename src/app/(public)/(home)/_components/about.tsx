@@ -46,7 +46,7 @@ export function About() {
               </div>
             </div>
           </div>
-          <div className="relative flex gap-2">
+          <div className="relative flex gap-4 lg:ml-15">
             <div className="bg-card p-4 rounded-lg shadow-sm border">
               <Image
                 src="/diego_about_pic.jpg"
