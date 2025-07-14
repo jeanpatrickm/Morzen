@@ -55,6 +55,7 @@ export function FormDescriptionStep({
             minLength={1}
             maxLength={128}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -66,6 +67,7 @@ export function FormDescriptionStep({
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             maxLength={1024}
+            required
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -79,6 +81,7 @@ export function FormDescriptionStep({
             onChange={(e) => setDescription(e.target.value)}
             minLength={1}
             maxLength={2048}
+            required
           />
 
           <p className="text-sm text-muted-foreground">
