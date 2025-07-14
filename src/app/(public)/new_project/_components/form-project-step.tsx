@@ -21,10 +21,8 @@ export function FormProjectStep({
   handleNext,
 }: ProjectSelectionStepProps) {
   return (
-    <div className="max-w-5xl mx-auto min-h-screen flex flex-col gap-10 items-center py-16">
-      <h1 className="text-2xl font-medium mt-5">
-        O que podemos fazer por você?
-      </h1>
+    <div className="max-w-5xl mx-auto min-h-screen flex flex-col gap-4 items-center py-16">
+      <h1 className="text-2xl font-medium">O que podemos fazer por você?</h1>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
         {projects.map((project, index) => (
           <Card
@@ -32,7 +30,7 @@ export function FormProjectStep({
             key={index}
             className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out "
           >
-            <CardHeader className="flex-grow flex flex-col justify-between">
+            <CardHeader className=" flex flex-col justify-between">
               <CardTitle className="text-xl font-semibold mb-4 text-center">
                 {project.title}
               </CardTitle>
@@ -46,7 +44,7 @@ export function FormProjectStep({
                 />
               </div>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-grow">
               <ul className="mt-2 text-sm text-muted-foreground space-y-1">
                 {project.description.map((item, i) => (
                   // biome-ignore lint/suspicious/noArrayIndexKey: <idk>

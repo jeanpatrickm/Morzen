@@ -123,6 +123,7 @@ button:hover {
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Inter";
     scrollbar-color: var(--foreground) var(--background);
     scrollbar-width: thin;
     scroll-behavior: smooth;
