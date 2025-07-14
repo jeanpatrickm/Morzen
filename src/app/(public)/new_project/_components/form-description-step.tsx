@@ -32,7 +32,7 @@ export function FormDescriptionStep({
   };
 
   return (
-    <div className="flex flex-col gap-6 items-center w-full max-w-lg mx-auto p-4 border rounded-lg shadow-md">
+    <div className="flex flex-col gap-6 items-center w-full max-w-lg mx-auto p-4 border rounded-lg shadow-md mt-35 mb-35">
       <h2 className="text-2xl font-semibold text-center">
         Detalhes do Projeto e Contato
       </h2>
