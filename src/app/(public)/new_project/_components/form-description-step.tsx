@@ -23,9 +23,11 @@ export function FormDescriptionStep({
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [honeyPot, setHoneyPot] = useState<string | undefined>(undefined);
 
   const handleFormSubmit = (e: FormEvent) => {
     e.preventDefault();
+    if (honeyPot) return;
     handleSubmit({ email, name, description });
     setName("");
     setEmail("");
@@ -84,11 +86,22 @@ export function FormDescriptionStep({
             maxLength={1024}
             required
           />
-
           <p className="text-sm text-muted-foreground">
             Nos conte um pouco mais sobre a sua ideia! Queremos entender o que
             você tem em mente.
           </p>
+        </div>
+        <div className="hidden">
+          <label htmlFor="honey">Deixe este campo em branco</label>
+          <input
+            type="text"
+            id="honey"
+            name="honey"
+            value={honeyPot}
+            onChange={(e) => setHoneyPot(e.target.value)}
+            autoComplete="off"
+            tabIndex={-1}
+          />
         </div>
         <div className="flex justify-between w-full">
           <div>
