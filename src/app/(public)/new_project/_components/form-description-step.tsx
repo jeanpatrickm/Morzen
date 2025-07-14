@@ -13,12 +13,14 @@ interface FormDescriptionProps {
     name: string;
     description: string;
   }) => void;
+  isLoading?: boolean;
 }
 
 export function FormDescriptionStep({
   selectedProject,
   handleBack,
   handleSubmit,
+  isLoading = false,
 }: FormDescriptionProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -105,12 +107,19 @@ export function FormDescriptionStep({
         </div>
         <div className="flex justify-between w-full">
           <div>
-            <Button variant="outline" onClick={handleBack} type="button">
+            <Button
+              variant="outline"
+              onClick={handleBack}
+              type="button"
+              disabled={isLoading}
+            >
               Voltar
             </Button>
           </div>
           <div>
-            <Button type="submit">Enviar</Button>
+            <Button type="submit" disabled={isLoading}>
+              Enviar
+            </Button>
           </div>
         </div>
       </form>

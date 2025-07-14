@@ -21,7 +21,7 @@ export function FormProjectStep({
   handleNext,
 }: ProjectSelectionStepProps) {
   return (
-    <div className="max-w-5xl mx-auto min-h-screen flex flex-col gap-4 items-center mt-10 p-4">
+    <div className="flex flex-col h-full gap-4 items-center mt-10 ">
       <h1 className="text-2xl font-medium mt-10 mb-10">
         O que podemos fazer por você?
       </h1>
