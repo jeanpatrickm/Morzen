@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FormProjectStep } from "./_components/form-project-step";
 import { FormDescriptionStep } from "./_components/form-description-step";
+import { FormProjectStep } from "./_components/form-project-step";
 import { Project } from "./projects";
 
 export default function NewProjectPage() {
