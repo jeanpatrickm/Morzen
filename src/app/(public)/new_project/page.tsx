@@ -37,7 +37,6 @@ export default function NewProjectPage() {
           Passo {currentStep} de {totalSteps}
         </p>
       </div>
-      {/* Renderização Condicional dos Passos */}
       {currentStep === 1 && (
         <FormProjectStep
           onProjectSelect={setSelectedProject}
