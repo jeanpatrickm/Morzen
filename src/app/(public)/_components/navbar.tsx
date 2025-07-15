@@ -1,6 +1,7 @@
 "use client";
 import { Code2, MenuIcon, Moon, Sun } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,7 @@ const LINKS = [
 
 export function Navbar() {
   return (
-    <div className="relative z-50 px-4 lg:px-6 h-16 flex items-center border-b border-gray-200 dark:border-white/10 backdrop-blur-sm bg-white/80 dark:bg-slate-950/80">
+    <div className="fixed w-full top-0 z-50 px-4 lg:px-6 h-16 flex items-center border-b border-gray-200 dark:border-white/10 backdrop-blur-sm bg-white/80 dark:bg-slate-950/80">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center">
@@ -47,7 +48,6 @@ export function Navbar() {
 }
 
 function DesktopNavbar() {
-  const { theme, setTheme } = useTheme();
   return (
     <nav className="hidden md:flex items-center space-x-8">
       {LINKS.map((l, i) => (
@@ -60,24 +60,17 @@ function DesktopNavbar() {
           Começar Projeto
         </Button>
       </Link>
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-      >
-        <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-        <span className="sr-only">Toggle theme</span>
-      </Button>
+      <ThemeChanger />
     </nav>
   );
 }
 
 function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   return (
-    <div className="md:hidden">
+    <div className="md:hidden space-x-4">
+      <ThemeChanger />
       <Sheet open={isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
         <SheetTrigger asChild>
           <Button variant="outline">
@@ -90,16 +83,20 @@ function MobileNavbar() {
           </SheetHeader>
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4 items-center">
             {LINKS.map((l, i) => (
-              <Link
+              <Button
                 key={i}
-                href={l.href}
+                variant={"outline"}
                 className="w-full"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsOpen(false);
+                  setTimeout(() => {
+                    router.push(l.href, { scroll: true });
+                  }, 200);
+                }}
               >
-                <Button variant={"outline"} className="w-full">
-                  {l.title}
-                </Button>
-              </Link>
+                {l.title}
+              </Button>
             ))}
             <Link
               href="/new_project"
@@ -112,5 +109,21 @@ function MobileNavbar() {
         </SheetContent>
       </Sheet>
     </div>
+  );
+}
+
+function ThemeChanger() {
+  const { theme, setTheme } = useTheme();
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+    >
+      <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <span className="sr-only">Toggle theme</span>
+    </Button>
   );
 }
