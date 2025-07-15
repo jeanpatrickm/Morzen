@@ -27,7 +27,7 @@ export default function NewProjectPage() {
   };
 
   return (
-    <main className="max-w-5xl mx-auto py-8 space-y-4 px-4">
+    <main className="max-w-5xl mx-auto  space-y-4 px-4 my-22">
       <div className="w-full max-w-xl mb-8 mx-auto">
         <div className="w-full bg-accent rounded-full h-2.5">
           <div
