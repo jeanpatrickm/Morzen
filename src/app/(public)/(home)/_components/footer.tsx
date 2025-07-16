@@ -1,4 +1,4 @@
-import { Code2 } from "lucide-react";
+import { Code2, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -29,6 +29,26 @@ export function Footer() {
               <li>contato.morzen@gmail.com</li>
               <li>São Paulo, SP</li>
             </ul>
+            <div className="flex justify-center md:justify-start space-x-4 mt-4">
+              <a
+                href="https://www.linkedin.com/in/morzen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
+              >
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/morzen.zenmor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="border-t border-gray-200 dark:border-white/10 mt-8 pt-8 text-center text-gray-600 dark:text-gray-300 w-full">

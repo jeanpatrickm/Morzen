@@ -47,24 +47,43 @@ export function About() {
             </div>
           </div>
           <div className="relative flex gap-4 lg:ml-15">
-            <div className="bg-card p-4 rounded-lg shadow-sm border">
+            <a
+              href="https://www.linkedin.com/in/diegorezm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil do LinkedIn do Diego"
+              className="group relative block w-full overflow-hidden rounded-lg shadow-sm border transform transition-transform duration-300 hover:scale-105"
+            >
               <Image
                 src="/diego_about_pic.jpg"
-                alt="Equipe Morzen desenvolvendo software"
+                alt="Diego, membro da equipe Morzen"
                 width={300}
                 height={300}
-                className="rounded-2xl object-cover"
+                className="rounded-lg object-cover w-full h-full"
               />
-            </div>
-            <div className="bg-card p-4 rounded-lg shadow-sm border">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                <span className="text-white font-semibold text-lg">Diego</span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jeanpatrickm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil do LinkedIn do Jean"
+              className="group relative block w-full overflow-hidden rounded-lg shadow-sm border transform transition-transform duration-300 hover:scale-105"
+            >
               <Image
                 src="/jean_about_pic.jpg"
-                alt="Equipe Morzen desenvolvendo software"
+                alt="Jean, membro da equipe Morzen"
                 width={300}
                 height={300}
-                className="rounded-2xl object-cover h-full"
+                className="rounded-lg object-cover w-full h-full"
               />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                <span className="text-white font-semibold text-lg">Jean</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
