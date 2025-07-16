@@ -1,5 +1,6 @@
 "use client";
-import { Code2, MenuIcon, Moon, Sun } from "lucide-react";
+import { MenuIcon, Moon, Sun } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
@@ -12,7 +13,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Image from "next/image";
 
 const LINKS = [
   {
