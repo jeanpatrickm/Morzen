@@ -12,6 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Image from "next/image";
 
 const LINKS = [
   {
@@ -33,12 +34,12 @@ export function Navbar() {
     <div className="fixed w-full top-0 z-50 px-4 lg:px-6 h-16 flex items-center border-b border-gray-200 dark:border-white/10 backdrop-blur-sm bg-white/80 dark:bg-slate-950/80">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center">
-            <Code2 className="h-5 w-5 text-white" />
-          </div>
-          <span className="text-xl font-bold text-gray-900 dark:text-white">
-            Morzen
-          </span>
+          <Image
+            src="/morzen_logo_with_name.png"
+            height={110}
+            width={110}
+            alt="Morzen"
+          />
         </Link>
         <DesktopNavbar />
         <MobileNavbar />

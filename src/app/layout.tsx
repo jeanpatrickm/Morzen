@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     creator: "@morzen.zenmor",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
   },
 };
 
