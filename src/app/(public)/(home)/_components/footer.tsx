@@ -31,7 +31,7 @@ export function Footer() {
             </ul>
             <div className="flex justify-center md:justify-start space-x-4 mt-4">
               <a
-                href="https://www.linkedin.com/in/morzen/"
+                href="https://www.linkedin.com/company/morzen.zenmor/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
