@@ -2,13 +2,14 @@ import { About } from "./_components/about";
 import { Contact } from "./_components/contact";
 import { Footer } from "./_components/footer";
 import { Hero } from "./_components/hero";
-import { Services } from "./_components/services";
+import { HowCanWeHelp } from "./_components/how-can-we-help";
 
 export default function MorzenLanding() {
   return (
     <main>
       <Hero />
-      <Services />
+      <HowCanWeHelp />
+      {/* <Services /> */}
       <About />
       {/* UMA HORA  */}
       {/* <Stats /> */}
