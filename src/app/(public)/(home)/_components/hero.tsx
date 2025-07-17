@@ -29,9 +29,11 @@ export function Hero() {
               <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
-          {/* <Button size="lg" variant="outline"> */}
-          {/*   Ver Portfolio */}
-          {/* </Button> */}
+          <Link href="/#how_can_we_help">
+            <Button size="lg" variant="outline">
+              Como podemos te ajudar?
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

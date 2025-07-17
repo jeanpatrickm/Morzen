@@ -127,5 +127,6 @@ button:hover {
     scrollbar-color: var(--foreground) var(--background);
     scrollbar-width: thin;
     scroll-behavior: smooth;
+    scroll-padding-top: 5px;
   }
 }
