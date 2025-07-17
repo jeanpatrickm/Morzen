@@ -64,7 +64,7 @@ export function HowCanWeHelp() {
         </div>
 
         <div className="text-center">
-          <Link href="mailto:contato@morzen.com" passHref>
+          <Link href="/new_project" passHref>
             <Button size="lg" className="text-base">
               Entre em contato <ChevronRight />
             </Button>
