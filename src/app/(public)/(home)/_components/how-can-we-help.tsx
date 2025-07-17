@@ -49,9 +49,9 @@ export function HowCanWeHelp() {
           exemplos do que podemos criar juntos:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-4xl w-full mx-auto">
           {services.map(({ title, description, icon: Icon }) => (
-            <Card key={title} className="hover:shadow-lg transition-shadow">
+            <Card key={title} className=" hover:shadow-lg transition-shadow">
               <CardHeader className="flex flex-col items-center justify-center">
                 <Icon className="w-8 h-8 text-purple-500 mb-2" />
                 <CardTitle>{title}</CardTitle>
