@@ -16,7 +16,7 @@ import {
 
 const LINKS = [
   {
-    href: "/#services",
+    href: "/#how_can_we_help",
     title: "Serviços",
   },
   {
