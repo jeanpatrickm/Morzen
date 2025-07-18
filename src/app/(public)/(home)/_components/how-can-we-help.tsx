@@ -1,27 +1,20 @@
 "use client";
 
-import {
-  ChevronRight,
-  Layout,
-  MonitorSmartphone,
-  Smartphone,
-} from "lucide-react";
-import Link from "next/link";
+import { Layout, MonitorSmartphone, Smartphone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
   {
     title: "Landing Pages",
     description:
-      "Páginas modernas e otimizadas para conversão, ideais para divulgar produtos e serviços.",
+      "Sites modernos, otimizados para causar impacto e essenciais para divulgar seus produtos e serviços.",
     icon: Layout,
   },
   {
     title: "Dashboards e Sistemas",
     description:
-      "Painéis administrativos, ERPs, CRMs e outros sistemas sob medida para seu negócio.",
+      "Painéis administrativos, ERPs, CRMs e sistemas sob medida para impulsionar o seu negócio.",
     icon: MonitorSmartphone,
   },
   {
@@ -52,7 +45,7 @@ export function HowCanWeHelp() {
           exemplos do que podemos criar juntos:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-4xl w-full mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-6xl w-full mx-auto">
           {services.map(({ title, description, icon: Icon }) => (
             <Card key={title} className=" hover:shadow-lg transition-shadow">
               <CardHeader className="flex flex-col items-center justify-center">
@@ -64,14 +57,6 @@ export function HowCanWeHelp() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Link href="/new_project" passHref>
-            <Button size="lg" className="text-base">
-              Entre em contato <ChevronRight />
-            </Button>
-          </Link>
         </div>
       </div>
     </section>

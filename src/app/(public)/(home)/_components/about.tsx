@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <section id="about" className="relative z-10 py-20 px-4">
+    <section id="about" className="relative z-10 py-20 px-4 mt-35">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -57,8 +57,8 @@ export function About() {
               <Image
                 src="/diego_about_pic.jpg"
                 alt="Diego, membro da equipe Morzen"
-                width={300}
-                height={300}
+                width={800}
+                height={800}
                 className="rounded-lg object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
@@ -76,8 +76,8 @@ export function About() {
               <Image
                 src="/jean_about_pic.jpg"
                 alt="Jean, membro da equipe Morzen"
-                width={300}
-                height={300}
+                width={800}
+                height={800}
                 className="rounded-lg object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
