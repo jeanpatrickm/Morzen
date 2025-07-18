@@ -1,7 +1,14 @@
 "use client";
 
-import { Layout, MonitorSmartphone, Smartphone } from "lucide-react";
+import {
+  ChevronRight,
+  Layout,
+  MonitorSmartphone,
+  Smartphone,
+} from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
@@ -57,6 +64,14 @@ export function HowCanWeHelp() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Link href="/new_project" passHref>
+            <Button size="lg" className="text-base">
+              Entre em contato <ChevronRight />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
