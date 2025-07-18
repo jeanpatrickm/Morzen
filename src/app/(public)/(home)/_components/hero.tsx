@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative z-10 pt-20 pb-32 px-4 h-screen flex justify-center items-center">
+    <section className="relative z-10 pt-10  px-4 min-h-screen flex justify-center items-center">
       <div className="container mx-auto text-center">
         <Badge className="mb-6 bg-purple-500/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-300 border-purple-500/20 dark:border-purple-500/30">
           Desenvolvimento de Software
@@ -29,6 +29,7 @@ export function Hero() {
               <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
+
           <Link href="/#how_can_we_help">
             <Button size="lg" variant="outline">
               Como podemos te ajudar?

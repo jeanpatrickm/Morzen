@@ -6,7 +6,7 @@ import { HowCanWeHelp } from "./_components/how-can-we-help";
 
 export default function MorzenLanding() {
   return (
-    <main>
+    <main className="">
       <Hero />
       <HowCanWeHelp />
       {/* <Services /> */}

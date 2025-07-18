@@ -34,7 +34,10 @@ const services = [
 
 export function HowCanWeHelp() {
   return (
-    <section id="how_can_we_help" className="relative z-10 py-20 px-4 ">
+    <section
+      id="how_can_we_help"
+      className="relative z-10 lg:py-20 px-4 lg:h-screen flex justify-center items-center "
+    >
       <div className="container mx-auto text-center">
         <Badge className="mb-4 bg-purple-500/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-300 border-purple-500/20 dark:border-purple-500/30">
           Como podemos te ajudar?
