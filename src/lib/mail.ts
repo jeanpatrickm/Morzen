@@ -34,7 +34,7 @@ export async function sendMail({
     return { message: "Email sent!" };
   } catch (error: unknown) {
     if (error instanceof Error) {
-      return { error: error, message: error.message };
+        return { error: error, message: error.message };
     }
     return {
       error: new Error("Something went wrong."),
