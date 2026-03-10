@@ -26,7 +26,7 @@ export function Footer() {
               Contato
             </h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>contato.morzen@gmail.com</li>
+              <li>contato@morzen.com.br</li>
               <li>São Paulo, SP</li>
             </ul>
             <div className="flex justify-center md:justify-start space-x-4 mt-4">
