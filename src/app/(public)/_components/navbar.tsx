@@ -1,9 +1,8 @@
 "use client";
-import { MenuIcon, Moon, Sun } from "lucide-react";
+import { ArrowUpRight, MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTheme } from "next-themes";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,52 +15,67 @@ import {
 
 const LINKS = [
   {
-    href: "/#how_can_we_help",
-    title: "Serviços",
+    href: "/#visao",
+    title: "Jornada",
   },
   {
-    title: "Sobre",
-    href: "/#about",
+    href: "/#software",
+    title: "Software",
   },
   {
-    title: "Contato",
-    href: "/#footer",
+    href: "/#fundadores",
+    title: "Fundadores",
+  },
+  {
+    href: "/#acompanhar",
+    title: "Acompanhar",
   },
 ];
 
 export function Navbar() {
   return (
-    <div className="fixed w-full top-0 z-50 px-4 lg:px-6 h-16 flex items-center border-b border-gray-200 dark:border-white/10 backdrop-blur-sm bg-white/80 dark:bg-slate-950/80">
-      <div className="container mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
+    <header className="morzen-nav-in fixed top-0 z-50 flex h-16 w-full items-center px-5 text-black sm:h-20 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+        <Link
+          href="/"
+          className="group flex items-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/30"
+          aria-label="Morzen"
+        >
           <Image
-            src="/morzen_logo_with_name.png"
-            height={110}
-            width={110}
-            alt="Morzen"
+            src="/morzen_mark.png"
+            alt=""
+            width={54}
+            height={40}
+            priority
+            className="morzen-nav-logo h-auto w-[46px] object-contain sm:w-[52px]"
           />
         </Link>
         <DesktopNavbar />
         <MobileNavbar />
       </div>
-    </div>
+    </header>
   );
 }
 
 function DesktopNavbar() {
   return (
-    <nav className="hidden md:flex items-center space-x-8">
+    <nav className="hidden items-center gap-8 md:flex">
       {LINKS.map((l, i) => (
-        <Link key={i} href={l.href} className="w-full">
-          <Button variant={"ghost"}>{l.title}</Button>
+        <Link
+          key={i}
+          href={l.href}
+          className="text-sm font-medium text-black transition hover:text-black/62 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/30"
+        >
+          {l.title}
         </Link>
       ))}
-      <Link href="/new_project">
-        <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600">
-          Começar Projeto
-        </Button>
+      <Link
+        href="/new_project"
+        className="morzen-liquid-button morzen-liquid-button-dark ml-2 inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-black transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/30"
+      >
+        Começar projeto
+        <ArrowUpRight className="size-4" aria-hidden="true" />
       </Link>
-      <ThemeChanger />
     </nav>
   );
 }
@@ -70,24 +84,31 @@ function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   return (
-    <div className="md:hidden space-x-4">
-      <ThemeChanger />
+    <div className="md:hidden">
       <Sheet open={isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
         <SheetTrigger asChild>
-          <Button variant="outline">
-            <MenuIcon />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="morzen-liquid-button morzen-liquid-button-light size-11 rounded-full text-black"
+            aria-label="Abrir menu"
+          >
+            <MenuIcon className="size-5" />
           </Button>
         </SheetTrigger>
-        <SheetContent aria-description="Mobile navigation">
+        <SheetContent
+          aria-description="Mobile navigation"
+          className="bg-[#f7f8ff] text-black"
+        >
           <SheetHeader>
-            <SheetTitle>Navegação</SheetTitle>
+            <SheetTitle className="text-black">Morzen</SheetTitle>
           </SheetHeader>
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4 items-center">
+          <nav className="container mx-auto flex flex-col items-center gap-3 px-4 py-4">
             {LINKS.map((l, i) => (
               <Button
                 key={i}
-                variant={"outline"}
-                className="w-full"
+                variant="ghost"
+                className="h-12 w-full justify-start rounded-xl text-base text-black hover:bg-black/5"
                 onClick={(e) => {
                   e.preventDefault();
                   setIsOpen(false);
@@ -104,27 +125,14 @@ function MobileNavbar() {
               className="w-full"
               onClick={() => setIsOpen(false)}
             >
-              <Button className="w-full">Começar Projeto</Button>
+              <Button className="morzen-liquid-button morzen-liquid-button-dark h-12 w-full rounded-full text-black">
+                Começar projeto
+                <ArrowUpRight className="size-4" aria-hidden="true" />
+              </Button>
             </Link>
           </nav>
         </SheetContent>
       </Sheet>
     </div>
-  );
-}
-
-function ThemeChanger() {
-  const { theme, setTheme } = useTheme();
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-    >
-      <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
-    </Button>
   );
 }

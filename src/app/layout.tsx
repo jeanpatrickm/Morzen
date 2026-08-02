@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Morzen - Desenvolvimento de Software",
+  title: "Morzen - Construindo software e uma startup em público",
   description:
-    "Transformamos suas ideias em soluções digitais inovadoras, com foco em performance, escalabilidade e experiência do usuário.",
+    "Acompanhe os bastidores da Morzen enquanto construímos software sob medida, produtos digitais e uma startup em público.",
   keywords: [
     "Desenvolvimento de software",
     "Aplicativos web",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://morzen.com.br",
-    title: "Morzen - Desenvolvimento de Software",
+    title: "Morzen - Construindo software e uma startup em público",
     description:
-      "Transformamos suas ideias em soluções digitais inovadoras, com foco em performance, escalabilidade e experiência do usuário.",
+      "Acompanhe os bastidores da Morzen enquanto construímos software sob medida, produtos digitais e uma startup em público.",
     siteName: "Morzen",
     images: [
       {
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Morzen - Desenvolvimento de Software",
+    title: "Morzen - Construindo software e uma startup em público",
     description:
-      "Transformamos suas ideias em soluções digitais inovadoras, com foco em performance, escalabilidade e experiência do usuário.",
+      "Acompanhe os bastidores da Morzen enquanto construímos software sob medida, produtos digitais e uma startup em público.",
     images: ["https://morzen.com.br/og.png"],
     site: "@morzen.zenmor",
     creator: "@morzen.zenmor",
@@ -69,7 +69,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
