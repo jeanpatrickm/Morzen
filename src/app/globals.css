@@ -244,6 +244,19 @@ button:hover {
     drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
 }
 
+.morzen-nav {
+  border-bottom: 1px solid transparent;
+  transition: background-color 240ms ease, border-color 240ms ease, box-shadow 240ms ease, backdrop-filter 240ms ease;
+}
+
+.morzen-nav-scrolled {
+  border-bottom-color: rgba(23, 21, 27, 0.09);
+  background: rgba(247, 247, 244, 0.78);
+  box-shadow: 0 10px 32px rgba(47, 34, 92, 0.07);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+}
+
 .morzen-liquid-button,
 .morzen-liquid-panel,
 .morzen-liquid-photo-card {
@@ -597,6 +610,8 @@ button:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .morzen-nav-in,
+  .morzen-nav,
+  .morzen-nav-scrolled,
   .morzen-hero-field,
   .morzen-hero-light,
   .morzen-hero-deep,

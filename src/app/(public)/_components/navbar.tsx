@@ -3,7 +3,7 @@ import { ArrowUpRight, MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -33,8 +33,21 @@ const LINKS = [
 ];
 
 export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="morzen-nav-in fixed top-0 z-50 flex h-16 w-full items-center px-5 text-black sm:h-20 lg:px-8">
+    <header
+      className={`morzen-nav-in morzen-nav fixed top-0 z-50 flex h-16 w-full items-center px-5 text-black sm:h-20 lg:px-8 ${
+        isScrolled ? "morzen-nav-scrolled" : ""
+      }`}
+    >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
           href="/"
