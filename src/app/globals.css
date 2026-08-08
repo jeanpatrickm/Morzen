@@ -123,7 +123,7 @@ button:hover {
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Inter";
+    font-family: "DM Sans", sans-serif;
     scrollbar-color: var(--foreground) var(--background);
     scrollbar-width: thin;
     scroll-behavior: smooth;
@@ -319,6 +319,13 @@ button:hover {
     inset 0 0 0 1px rgba(255, 255, 255, 0.42);
 }
 
+.morzen-liquid-button-selected {
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow:
+    0 16px 38px rgba(76, 73, 140, 0.16),
+    inset 0 0 0 1px rgba(93, 69, 232, 0.42);
+}
+
 .morzen-liquid-button-clear {
   background: rgba(255, 255, 255, 0.1);
   box-shadow:
@@ -336,6 +343,183 @@ button:hover {
 
 .morzen-liquid-photo-card {
   background: rgba(255, 255, 255, 0.56);
+}
+
+.morzen-project-page {
+  background:
+    radial-gradient(circle at 16% 12%, rgba(103, 75, 242, 0.22), transparent 34%),
+    radial-gradient(circle at 88% 10%, rgba(137, 124, 255, 0.22), transparent 32%),
+    linear-gradient(135deg, #f0efff 0%, #f8f9ff 48%, #e8e8ff 100%);
+}
+
+.morzen-project-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.35;
+}
+
+.morzen-project-glow-left {
+  left: -10rem;
+  top: 18rem;
+  width: 28rem;
+  height: 28rem;
+  background: #6045df;
+}
+
+.morzen-project-glow-right {
+  right: -12rem;
+  bottom: 2rem;
+  width: 34rem;
+  height: 34rem;
+  background: #b4b0ff;
+}
+
+.morzen-form-control {
+  min-height: 2.9rem;
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.32);
+  color: #11111a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.36);
+}
+
+.morzen-form-control::placeholder {
+  color: rgba(17, 17, 26, 0.42);
+}
+
+.morzen-form-control:focus-visible {
+  border-color: rgba(93, 69, 232, 0.55);
+  box-shadow:
+    0 0 0 3px rgba(93, 69, 232, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.morzen-project-page {
+  background:
+    radial-gradient(circle at 82% 4%, rgba(185, 168, 255, 0.28), transparent 28rem),
+    radial-gradient(circle at 4% 88%, rgba(220, 216, 248, 0.52), transparent 30rem),
+    #f7f7f4;
+}
+
+.morzen-project-layout {
+  display: grid;
+  gap: 4rem;
+}
+
+.morzen-project-intro,
+.morzen-project-flow {
+  animation: morzen-editorial-enter 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.morzen-project-flow {
+  animation-delay: 100ms;
+}
+
+.morzen-project-progress {
+  border-top: 1px solid rgba(23, 21, 27, 0.12);
+  padding-top: 1.1rem;
+}
+
+.morzen-project-option {
+  background: rgba(255, 255, 255, 0.46);
+  box-shadow: 0 18px 50px rgba(47, 34, 92, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.66);
+  transition: transform 250ms ease, box-shadow 250ms ease, background-color 250ms ease;
+}
+
+.morzen-project-option:hover {
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 24px 60px rgba(47, 34, 92, 0.13), inset 0 0 0 1px rgba(100, 69, 216, 0.2);
+}
+
+.morzen-project-option-button,
+.morzen-project-next,
+.morzen-project-back,
+.morzen-project-submit {
+  min-height: 3rem;
+  transition: transform 200ms ease, background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.morzen-project-option-button:hover,
+.morzen-project-next:hover,
+.morzen-project-back:hover,
+.morzen-project-submit:hover {
+  transform: translateY(-2px);
+}
+
+.morzen-project-option-button-quiet {
+  background: rgba(255, 255, 255, 0.44);
+  box-shadow: inset 0 0 0 1px rgba(23, 21, 27, 0.12);
+}
+
+.morzen-project-option-button-selected,
+.morzen-project-next,
+.morzen-project-submit {
+  background: #17151b;
+  box-shadow: 0 12px 24px rgba(23, 21, 27, 0.14);
+}
+
+.morzen-project-option-button-selected:hover,
+.morzen-project-next:hover,
+.morzen-project-submit:hover {
+  background: #6445d8;
+}
+
+.morzen-project-form {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 24px 70px rgba(47, 34, 92, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.morzen-project-selected {
+  background: rgba(220, 216, 248, 0.56);
+  box-shadow: inset 0 0 0 1px rgba(100, 69, 216, 0.16);
+}
+
+.morzen-project-back {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(23, 21, 27, 0.16);
+}
+
+.morzen-project-back:hover {
+  color: #6445d8;
+  box-shadow: inset 0 0 0 1px rgba(100, 69, 216, 0.46);
+}
+
+.morzen-project-form .morzen-form-control {
+  border-color: rgba(23, 21, 27, 0.14);
+  background: rgba(255, 255, 255, 0.46);
+  box-shadow: none;
+}
+
+.morzen-project-form .morzen-form-control:focus-visible {
+  border-color: rgba(100, 69, 216, 0.6);
+  box-shadow: 0 0 0 3px rgba(100, 69, 216, 0.12);
+}
+
+@media (min-width: 1024px) {
+  .morzen-project-layout {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    align-items: start;
+    gap: 7rem;
+  }
+
+  .morzen-project-intro {
+    position: sticky;
+    top: 9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .morzen-project-intro,
+  .morzen-project-flow,
+  .morzen-project-option,
+  .morzen-project-option-button,
+  .morzen-project-next,
+  .morzen-project-back,
+  .morzen-project-submit {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 .morzen-hero-field {
@@ -434,5 +618,226 @@ button:hover {
   .morzen-social-link,
   .morzen-final-pulse a {
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* Editorial landing direction: one calm surface, one violet accent, and stronger rhythm. */
+.morzen-site {
+  --morzen-ink: #17151b;
+  --morzen-violet: #6445d8;
+  --morzen-line: rgba(23, 21, 27, 0.12);
+}
+
+.morzen-editorial-hero {
+  background:
+    radial-gradient(circle at 82% 38%, rgba(183, 166, 255, 0.3), transparent 25rem),
+    radial-gradient(circle at 50% 110%, rgba(220, 216, 248, 0.55), transparent 34rem),
+    #f7f7f4;
+}
+
+.morzen-hero-grain {
+  opacity: 0.14;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.morzen-eyebrow {
+  color: rgba(23, 21, 27, 0.5);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.morzen-hero-copy,
+.morzen-workbench,
+.morzen-editorial-list-item,
+.morzen-section > div > * {
+  animation: morzen-editorial-enter 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.morzen-workbench {
+  animation-delay: 130ms;
+}
+
+.morzen-workbench-frame {
+  transform: rotate(2deg);
+  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 650ms ease;
+}
+
+.morzen-workbench:hover .morzen-workbench-frame {
+  transform: rotate(0deg) translateY(-5px);
+  box-shadow: 0 38px 100px rgba(47, 34, 92, 0.23);
+}
+
+.morzen-workbench-note,
+.morzen-workbench-card {
+  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.morzen-workbench:hover .morzen-workbench-note {
+  transform: rotate(-3deg) translate(-4px, -5px);
+}
+
+.morzen-workbench:hover .morzen-workbench-card {
+  transform: translate(3px, -5px);
+}
+
+.morzen-workbench-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 1.5rem;
+  border: 1px solid rgba(100, 69, 216, 0.2);
+  border-radius: inherit;
+}
+
+.morzen-status-dot {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--morzen-violet);
+  box-shadow: 0 0 0 5px rgba(100, 69, 216, 0.12);
+}
+
+.morzen-editorial-button,
+.morzen-follow-cta {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  transition: transform 220ms ease, background-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
+}
+
+.morzen-editorial-button:hover,
+.morzen-follow-cta:hover {
+  transform: translateY(-2px);
+}
+
+.morzen-editorial-button:focus-visible,
+.morzen-text-link:focus-visible,
+.morzen-follow-link:focus-visible,
+.morzen-follow-cta:focus-visible {
+  outline: 2px solid var(--morzen-violet);
+  outline-offset: 4px;
+}
+
+.morzen-editorial-button-primary {
+  background: var(--morzen-ink);
+  color: white;
+  box-shadow: 0 12px 24px rgba(23, 21, 27, 0.14);
+}
+
+.morzen-editorial-button-primary:hover {
+  background: var(--morzen-violet);
+}
+
+.morzen-editorial-button-quiet {
+  border: 1px solid var(--morzen-line);
+  color: var(--morzen-ink);
+}
+
+.morzen-editorial-button-quiet:hover {
+  border-color: rgba(100, 69, 216, 0.42);
+  color: var(--morzen-violet);
+}
+
+.morzen-editorial-list-item {
+  border-top: 1px solid var(--morzen-line);
+  padding-top: 1.15rem;
+}
+
+.morzen-editorial-list-item:nth-child(2) { animation-delay: 80ms; }
+.morzen-editorial-list-item:nth-child(3) { animation-delay: 160ms; }
+.morzen-editorial-list-item:nth-child(4) { animation-delay: 240ms; }
+
+.morzen-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--morzen-ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color 200ms ease, transform 200ms ease;
+}
+
+.morzen-text-link:hover {
+  color: var(--morzen-violet);
+  transform: translateX(3px);
+}
+
+.morzen-software-section {
+  background-image: radial-gradient(circle at 88% 6%, rgba(119, 87, 226, 0.2), transparent 25rem);
+}
+
+.morzen-follow-section {
+  background:
+    radial-gradient(circle at 72% 0%, rgba(117, 87, 228, 0.42), transparent 30rem),
+    #201835;
+}
+
+.morzen-follow-mark {
+  color: #c8b9ff;
+}
+
+.morzen-follow-section .morzen-eyebrow {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.morzen-follow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.85rem;
+  transition: color 200ms ease, transform 200ms ease;
+}
+
+.morzen-follow-link:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+.morzen-follow-cta {
+  background: white;
+  color: var(--morzen-ink);
+}
+
+.morzen-follow-cta:hover {
+  background: #c8b9ff;
+}
+
+@keyframes morzen-editorial-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .morzen-workbench-card { bottom: -1.5rem; }
+  .morzen-workbench-note { left: -0.5rem; top: 1rem; width: 9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .morzen-hero-copy,
+  .morzen-workbench,
+  .morzen-editorial-list-item,
+  .morzen-section > div > *,
+  .morzen-workbench-frame,
+  .morzen-workbench-note,
+  .morzen-workbench-card,
+  .morzen-editorial-button,
+  .morzen-follow-cta,
+  .morzen-text-link,
+  .morzen-follow-link {
+    animation: none !important;
+    transition: none !important;
   }
 }

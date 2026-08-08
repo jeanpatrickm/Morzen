@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import type React from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Morzen - Construindo software e uma startup em público",
+  title: "Morzen - Construindo um legado, com você",
   description:
-    "Acompanhe os bastidores da Morzen enquanto construímos software sob medida, produtos digitais e uma startup em público.",
+    "A Morzen constrói produtos digitais lado a lado com seus clientes e compartilha cada etapa do caminho com transparência.",
   keywords: [
     "Desenvolvimento de software",
     "Aplicativos web",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://morzen.com.br",
-    title: "Morzen - Construindo software e uma startup em público",
+    title: "Morzen - Construindo um legado, com você",
     description:
-      "Acompanhe os bastidores da Morzen enquanto construímos software sob medida, produtos digitais e uma startup em público.",
+      "A Morzen constrói produtos digitais lado a lado com seus clientes e compartilha cada etapa do caminho com transparência.",
     siteName: "Morzen",
     images: [
       {
@@ -47,9 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Morzen - Construindo software e uma startup em público",
-    description:
-      "Acompanhe os bastidores da Morzen enquanto construímos software sob medida, produtos digitais e uma startup em público.",
+    title: "Morzen - Construindo um legado, com você",
+    description: "A Morzen constrói produtos digitais lado a lado com seus clientes e compartilha cada etapa do caminho com transparência.",
     images: ["https://morzen.com.br/og.png"],
     site: "@morzen.zenmor",
     creator: "@morzen.zenmor",
@@ -66,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={dmSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

@@ -16,19 +16,19 @@ import {
 const LINKS = [
   {
     href: "/#visao",
-    title: "Jornada",
+    title: "Por aqui",
   },
   {
     href: "/#software",
-    title: "Software",
+    title: "O que fazemos",
   },
   {
     href: "/#fundadores",
-    title: "Fundadores",
+    title: "Pessoas",
   },
   {
     href: "/#acompanhar",
-    title: "Acompanhar",
+    title: "Ficar por perto",
   },
 ];
 
@@ -73,7 +73,7 @@ function DesktopNavbar() {
         href="/new_project"
         className="morzen-liquid-button morzen-liquid-button-dark ml-2 inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-black transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/30"
       >
-        Começar projeto
+        Conversar sobre um projeto
         <ArrowUpRight className="size-4" aria-hidden="true" />
       </Link>
     </nav>

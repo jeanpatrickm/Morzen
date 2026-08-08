@@ -1,4 +1,5 @@
 import { type FormEvent, useState } from "react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -37,25 +38,33 @@ export function FormDescriptionStep({
   };
 
   return (
-    <div className="flex flex-col gap-6 items-center w-full max-w-lg mx-auto p-4 border rounded-lg shadow-md mt-25 mb-25">
-      <h2 className="text-2xl font-semibold text-center">
-        Detalhes do Projeto e Contato
-      </h2>
+    <div className="morzen-project-form mx-auto flex w-full max-w-2xl flex-col items-center gap-7 p-6 sm:p-10">
+      <div className="w-full">
+        <p className="morzen-eyebrow">Etapa 02</p>
+        <h2 className="mt-4 text-3xl font-medium tracking-[-0.04em] sm:text-4xl">
+          Vamos entender o seu desafio.
+        </h2>
+        <p className="mt-3 leading-7 text-black/58">
+          Compartilhe o contexto, os objetivos e o que precisa melhorar. A
+          gente responde para conversar sobre os próximos passos.
+        </p>
+      </div>
 
       {selectedProject && (
-        <p className="text-lg text-muted-foreground">
-          Você selecionou:{" "}
-          <span className="font-bold text-purple-400">
+        <div className="morzen-project-selected w-full px-4 py-3 text-sm text-black/58">
+          Você quer começar por: <span className="font-semibold text-black">
             {selectedProject.title}
           </span>
-        </p>
+        </div>
       )}
-      <form className="w-full space-y-4" onSubmit={handleFormSubmit}>
+      <form className="w-full space-y-5" onSubmit={handleFormSubmit}>
+        <div className="grid gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
-          <Label htmlFor="nome">Nome</Label>
+          <Label className="text-sm font-medium text-black/72" htmlFor="nome">Nome</Label>
           <Input
             id="nome"
-            placeholder="Seu nome..."
+            className="morzen-form-control"
+            placeholder="Seu nome"
             value={name}
             minLength={1}
             maxLength={128}
@@ -64,33 +73,36 @@ export function FormDescriptionStep({
           />
         </div>
         <div className="flex flex-col gap-2">
-          <Label htmlFor="email">Email</Label>
+          <Label className="text-sm font-medium text-black/72" htmlFor="email">Email</Label>
           <Input
             id="email"
             type="email"
-            placeholder="Seu email..."
+            className="morzen-form-control"
+            placeholder="Seu melhor email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             maxLength={512}
             required
           />
         </div>
+        </div>
         <div className="flex flex-col gap-2">
-          <Label htmlFor="desc">Descrição</Label>
+          <Label className="text-sm font-medium text-black/72" htmlFor="desc">Qual desafio você quer resolver?</Label>
           <Textarea
             id="desc"
             rows={4}
             cols={4}
-            placeholder="Descreva a sua ideia..."
+            className="morzen-form-control min-h-36 resize-y"
+            placeholder="Conte o que está acontecendo e o que você gostaria de melhorar"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             minLength={4}
             maxLength={1024}
             required
           />
-          <p className="text-sm text-muted-foreground">
-            Nos conte um pouco mais sobre a sua ideia! Queremos entender o que
-            você tem em mente.
+          <p className="text-sm leading-6 text-black/48">
+            Quanto mais contexto você compartilhar, melhor conseguimos pensar
+            junto com você.
           </p>
         </div>
         <div className="hidden">
@@ -105,22 +117,26 @@ export function FormDescriptionStep({
             tabIndex={-1}
           />
         </div>
-        <div className="flex justify-between w-full">
-          <div>
+        <div className="flex w-full flex-col-reverse gap-3 pt-2 sm:flex-row sm:justify-between">
             <Button
-              variant="outline"
+              variant="ghost"
+              className="morzen-project-back rounded-full px-5 text-black"
               onClick={handleBack}
               type="button"
               disabled={isLoading}
             >
+              <ArrowLeft className="size-4" aria-hidden="true" />
               Voltar
             </Button>
-          </div>
-          <div>
-            <Button type="submit" disabled={isLoading}>
-              Enviar
+            <Button
+              type="submit"
+              variant="ghost"
+              className="morzen-project-submit rounded-full px-6 text-white"
+              disabled={isLoading}
+            >
+              {isLoading ? "Enviando sua mensagem..." : "Quero conversar sobre isso"}
+              <ArrowUpRight className="size-4" aria-hidden="true" />
             </Button>
-          </div>
         </div>
       </form>
     </div>
