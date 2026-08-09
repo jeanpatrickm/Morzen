@@ -15,8 +15,8 @@ import Link from "next/link";
 export default function MorzenLanding() {
   return (
     <main className="morzen-site overflow-hidden bg-[#f7f7f4] text-[#17151b]">
-      <section id="jornada" className="morzen-hero-interactive relative flex min-h-[100dvh] overflow-hidden px-6 pt-28 text-black">
-        <div className="morzen-hero-field absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,#6848f5_0%,rgba(116,86,245,0.66)_22%,rgba(240,239,255,0.74)_48%,transparent_68%),radial-gradient(circle_at_78%_10%,rgba(119,91,255,0.72)_0%,rgba(142,128,255,0.42)_26%,transparent_52%),radial-gradient(circle_at_12%_100%,#24106f_0%,rgba(78,55,163,0.7)_19%,transparent_42%),linear-gradient(115deg,#eeeaff_0%,#f7f8ff_43%,#9894ff_100%)]" />
+      <section id="jornada" className="morzen-hero-interactive relative flex min-h-[100dvh] overflow-hidden bg-[linear-gradient(115deg,#eeeaff_0%,#f7f8ff_43%,#9894ff_100%)] px-6 pt-28 text-black">
+        <div className="morzen-hero-field absolute -inset-[8%] bg-[radial-gradient(circle_at_18%_18%,#6848f5_0%,rgba(116,86,245,0.66)_22%,rgba(240,239,255,0.74)_48%,transparent_68%),radial-gradient(circle_at_78%_10%,rgba(119,91,255,0.72)_0%,rgba(142,128,255,0.42)_26%,transparent_52%),radial-gradient(circle_at_12%_100%,#24106f_0%,rgba(78,55,163,0.7)_19%,transparent_42%),linear-gradient(115deg,#eeeaff_0%,#f7f8ff_43%,#9894ff_100%)]" />
         <div className="morzen-hero-light absolute inset-0 bg-[radial-gradient(ellipse_at_48%_34%,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.66)_22%,rgba(255,255,255,0)_58%)]" />
         <div className="morzen-hero-deep absolute -left-24 bottom-0 h-80 w-[36rem] rounded-[45%] bg-[#06145f]/80 blur-3xl" />
         <div className="morzen-hero-violet absolute right-[-10%] top-[-14%] h-[30rem] w-[46rem] rounded-[50%] bg-[#695cff]/34 blur-3xl" />
