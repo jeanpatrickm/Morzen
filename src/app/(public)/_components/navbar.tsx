@@ -60,7 +60,7 @@ export function Navbar() {
             width={54}
             height={40}
             priority
-            className="morzen-nav-logo h-auto w-[46px] object-contain sm:w-[52px]"
+            className="h-auto w-[46px] object-contain sm:w-[52px]"
           />
         </Link>
         <DesktopNavbar />

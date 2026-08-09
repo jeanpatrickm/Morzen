@@ -238,12 +238,6 @@ button:hover {
   animation: morzen-hero-enter 700ms cubic-bezier(0.16, 1, 0.3, 1) 80ms both;
 }
 
-.morzen-nav-logo {
-  filter:
-    brightness(0)
-    drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
-}
-
 .morzen-nav {
   border-bottom: 1px solid transparent;
   transition: background-color 240ms ease, border-color 240ms ease, box-shadow 240ms ease, backdrop-filter 240ms ease;
