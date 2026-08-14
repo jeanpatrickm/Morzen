@@ -503,14 +503,14 @@ const services = [
 const founders = [
   {
     name: "Jean Patrick",
-    image: "/jean_about_pic.jpg",
+    image: "/jean_about_pic.webp",
     alt: "Foto de Jean Patrick, fundador da Morzen",
     copy: "Produto, interface e detalhe para transformar contexto em uma experiência clara.",
     profile: socialProfiles.jeanLinkedin,
   },
   {
     name: "Diego Rezende",
-    image: "/diego_about_pic.jpg",
+    image: "/diego_about_pic.webp",
     alt: "Foto de Diego Rezende, fundador da Morzen",
     copy: "Tecnologia, execução e constância para construir algo que continue fazendo sentido.",
     profile: socialProfiles.diegoLinkedin,
